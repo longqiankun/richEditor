@@ -1,4 +1,4 @@
-package com.lqk.richeditor;
+package com.lqk.richDemo;
 
 import org.junit.Test;
 
