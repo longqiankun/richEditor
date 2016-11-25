@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">RichEditor</string>
+    <string name="default_text_size">默认字体</string>
 </resources>

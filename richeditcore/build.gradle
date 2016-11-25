@@ -4,7 +4,7 @@ apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'com.jfrog.bintray'
 def siteUrl = 'https://github.com/longqiankun/richeditor'    // project homepage
 def gitUrl = 'https://github.com/longqiankun/richeditor.git' // project git
-version = "0.1"
+version = "0.2"
 group = "com.lqk.richeditor"
 //gradle aar--------end
 android {

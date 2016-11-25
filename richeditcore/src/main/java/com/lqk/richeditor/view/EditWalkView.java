@@ -42,6 +42,8 @@ public class EditWalkView extends XWalkView {
     }
 
     private static final String SETUP_HTML = "file:///android_asset/editor.html";
+//    private static final String SETUP_HTML = "file:///android_asset/editor/index2.html";
+//    private static final String SETUP_HTML = "https://www.shiqichuban.com";
     private static final String CALLBACK_SCHEME = "re-callback://";
     private static final String STATE_SCHEME = "re-state://";
     private boolean isReady = false;
@@ -56,29 +58,26 @@ public class EditWalkView extends XWalkView {
 
     public EditWalkView(Context context, AttributeSet attrs) {
         super(context, attrs);
-        setting();
+
         load(SETUP_HTML, null);
+        setting();
         applyAttributes(context, attrs);
     }
 private void setting(){
     setVerticalScrollBarEnabled(false);
     setHorizontalScrollBarEnabled(false);
     XWalkSettings webSettings = getSettings();
+    webSettings.setUseWideViewPort(true);
 // User settings
-    webSettings.setJavaScriptCanOpenWindowsAutomatically(true);
+    webSettings.setJavaScriptCanOpenWindowsAutomatically(false);
     webSettings.setUseWideViewPort(true);//关键点
     webSettings.setLayoutAlgorithm(XWalkSettings.LayoutAlgorithm.SINGLE_COLUMN);
     webSettings.setJavaScriptEnabled(true); // 设置支持javascript脚本
-    webSettings.setAllowFileAccess(true); // 允许访问文件
+   // webSettings.setAllowFileAccess(true); // 允许访问文件
     webSettings.setBuiltInZoomControls(false); // 设置显示缩放按钮
     webSettings.setSupportZoom(false); // 支持缩放
     webSettings.setLoadWithOverviewMode(true);
-//    webSettings.setInitialPageScale(1.0f);
     setResourceClient(createWebviewClient());
-/**
- * 用WebView显示图片，可使用这个参数 设置网页布局类型： 1、LayoutAlgorithm.NARROW_COLUMNS ：
- * 适应内容大小 2、LayoutAlgorithm.SINGLE_COLUMN:适应屏幕，内容将自动缩放
- */
 }
     public EditWalkView(Context context, Activity activity) {
         super(context, activity);
