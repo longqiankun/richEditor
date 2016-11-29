@@ -8,3 +8,18 @@ gradle javadocJar
 gradle  sourcesJar
 gradle  install
 gradle  bintrayUpload
+
+集成：
+在modle gradle 文件中添加以下代码：
+repositories {
+    maven {
+        url 'https://dl.bintray.com/longqiankun/maven/'
+
+    }
+    maven {
+        url 'https://download.01.org/crosswalk/releases/crosswalk/android/maven2'
+
+    }
+}
+
+ compile 'com.lqk.richeditor:richeditcore:0.2'
